@@ -1,0 +1,23 @@
+# VS Code
+.vscode/
+
+# Arquivos do IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Diretório de build
+target/
+bin/
+build/
+
+# Arquivos do H2
+data/
+
+# Arquivos temporários
+*.log
+*.tmp
+
+# Configurações específicas do Spring
+application.properties
