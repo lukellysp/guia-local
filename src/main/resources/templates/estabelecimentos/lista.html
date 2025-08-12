@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Estabelecimentos</title>
+</head>
+<body>
+<h1>Estabelecimentos</h1>
+
+<a href="/estabelecimentos/novo">Cadastrar novo estabelecimento</a>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Endereço</th>
+            <th>Telefone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="est : ${estabelecimentos}">
+            <td th:text="${est.nome}"></td>
+            <td th:text="${est.endereco}"></td>
+            <td th:text="${est.telefone}"></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
