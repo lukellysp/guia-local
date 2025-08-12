@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cadastrar Estabelecimento</title>
+</head>
+<body>
+<h1>Cadastrar Estabelecimento</h1>
+
+<form action="#" th:action="@{/estabelecimentos}" th:object="${estabelecimento}" method="post">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" th:field="*{nome}" required/>
+    <br/>
+
+    <label for="endereco">Endereço:</label>
+    <input type="text" id="endereco" th:field="*{endereco}" required/>
+    <br/>
+
+    <label for="telefone">Telefone:</label>
+    <input type="text" id="telefone" th:field="*{telefone}" required/>
+    <br/>
+
+    <button type="submit">Cadastrar</button>
+</form>
+
+<a href="/estabelecimentos">Voltar para lista</a>
+</body>
+</html>
