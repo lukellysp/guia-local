@@ -37,3 +37,9 @@ public class Estabelecimento {
     public String getTelefone() { return telefone; }
     public void setTelefone(String telefone) { this.telefone = telefone; }
 }
+
+@OneToMany(mappedBy = "estabelecimento", cascade = CascadeType.ALL, orphanRemoval = true)
+private List<Comentario> comentarios = new ArrayList<>();
+
+public List<Comentario> getComentarios() { return comentarios; }
+public void setComentarios(List<Comentario> comentarios) { this.comentarios = comentarios; }
